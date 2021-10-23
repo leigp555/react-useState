@@ -2,9 +2,6 @@ import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import useUpdate from "./hook/update.js"
 
-
-
-
 const root = document.getElementById("root")
 const App = () => {
     return (
@@ -18,7 +15,7 @@ const Son = () => {
     const add = () => {
         setState(n + 1)
     }
-    useEffect(()=>{console.log("组件消亡了")})
+    useEffect(()=> ()=>{console.log("组件消亡了")})
     useUpdate(()=>console.log("n变化了"),n)
     return (
         <>
